@@ -1169,6 +1169,9 @@
         <xs:element ref="Decisions" minOccurs="0" maxOccurs="1"/>
         <xs:group ref="EXPRESSION" minOccurs="1" maxOccurs="1"/>
 <!--        <xs:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>-->
+        <!-- commented above as its causing error
+       "Value" already exists
+        -->
       </xs:sequence>
     </xs:sequence>
     <xs:attribute name="name" type="FIELD-NAME" use="required"/>

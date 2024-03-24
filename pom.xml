@@ -69,8 +69,8 @@
 						<schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
 						<packageName>com.example.convertxsdtojava</packageName>
 						<schemaFiles>pmml-4-4.xsd</schemaFiles>
-						<outputDirectory>${project.build.directory}/generated-sources/firstMessage</outputDirectory>
-						<staleFile>${project.build.directory}/generated-sources/firstMessage-stale</staleFile>
+						<outputDirectory>${project.build.directory}/generated-sources/JAVAClassesOfXSDFile</outputDirectory>
+<!--						<staleFile>${project.build.directory}/generated-sources/firstMessage-stale</staleFile>-->
 					</configuration>
 				</execution>
 				</executions>
