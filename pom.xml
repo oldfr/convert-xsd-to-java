@@ -46,15 +46,6 @@
 
 	<build>
 		<plugins>
-		<!--	<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<image>
-						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
-					</image>
-				</configuration>
-			</plugin>-->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
@@ -67,27 +58,13 @@
 					</goals>
 					<configuration>
 						<schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
-						<packageName>com.example.convertxsdtojava</packageName>
+						<packageName>convertxsdtojava</packageName>
 						<schemaFiles>pmml-4-4.xsd</schemaFiles>
-						<outputDirectory>${project.build.directory}/generated-sources/JAVAClassesOfXSDFile</outputDirectory>
-<!--						<staleFile>${project.build.directory}/generated-sources/firstMessage-stale</staleFile>-->
+						<outputDirectory>${project.basedir}/src/main/java/com/example/convertxsdtojava/model</outputDirectory>
+<!--						<outputDirectory>${project.build.directory}/generated-sources/JAVAClassesOfXSDFile</outputDirectory>-->
 					</configuration>
 				</execution>
 				</executions>
-				<!--<execution>
-					<id>jaxb-SecondMessage</id>
-					<goals>
-						<goal>xjc</goal>
-					</goals>
-					<configuration>
-						<schemaDirectory>${project.basedir}/src/main/resources/xsd</schemaDirectory>
-						<clearOutputDir>false</clearOutputDir>
-						<packageName>my.test.secondmessage</packageName>
-						<schemaFiles>SecondMessage.xsd</schemaFiles>
-						<outputDirectory>${project.build.directory}/generated-sources/secondMessage</outputDirectory>
-						<staleFile>${project.build.directory}/generated-sources/secondMessage-stale</staleFile>
-					</configuration>
-				</execution>-->
 			</plugin>
 		</plugins>
 	</build>
