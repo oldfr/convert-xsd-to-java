@@ -1168,7 +1168,7 @@
       <xs:sequence minOccurs="0" maxOccurs="1">
         <xs:element ref="Decisions" minOccurs="0" maxOccurs="1"/>
         <xs:group ref="EXPRESSION" minOccurs="1" maxOccurs="1"/>
-<!--        <xs:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>-->
+        <xs:element ref="Value" minOccurs="0" maxOccurs="unbounded"/>
         <!-- commented above as its causing error
        "Value" already exists
         -->
@@ -1180,7 +1180,7 @@
     <xs:attribute name="dataType" type="DATATYPE" use="required"/>
     <xs:attribute name="targetField" type="FIELD-NAME"/>
     <xs:attribute name="feature" type="RESULT-FEATURE" default="predictedValue"/>
-    <xs:attribute name="value" type="xs:string"/>
+    <xs:attribute name="value1" type="xs:string"/>
     <xs:attribute name="ruleFeature" type="RULE-FEATURE" default="consequent"/>
     <xs:attribute name="algorithm" default="exclusiveRecommendation">
       <xs:simpleType>
