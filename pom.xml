@@ -46,29 +46,30 @@
 
 	<build>
 		<plugins>
-			<!--			Below plugin will generate java classes in target/main folder based on configuration-->
-			<!--<plugin>
+<!--			Option 1. JAXB plugin-->
+			<!--			Below will generate java classes in target folder based on configuration-->
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
 				<version>1.5</version>
 				<executions>
 				<execution>
-					<id>jaxb-FirstMessage</id>
+					<id>jaxb-test</id>
 					<goals>
 						<goal>xjc</goal>
 					</goals>
 					<configuration>
 						<schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
-						<packageName>convertxsdtojava</packageName>
+						<packageName>model</packageName>
 						<schemaFiles>pmml-4-4.xsd</schemaFiles>
-						<outputDirectory>${project.basedir}/src/main/java/com/example/convertxsdtojava/model</outputDirectory>
-&lt;!&ndash;						<outputDirectory>${project.build.directory}/generated-sources/JAVAClassesOfXSDFile</outputDirectory>&ndash;&gt;
+						<outputDirectory>${project.build.directory}/generated-sources/JAVAClassesOfXSDFile</outputDirectory>
 					</configuration>
 				</execution>
 				</executions>
-			</plugin>-->
-<!--			Below plugin will generate java classes in target folder-->
-			<plugin>
+			</plugin>
+<!--			Option 2. Apache plugin (Uncomment below to use)-->
+<!--			Below will generate java classes in target folder-->
+			<!--<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-xjc-plugin</artifactId>
 				<version>3.3.0</version>
@@ -89,7 +90,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 
